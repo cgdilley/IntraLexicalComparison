@@ -1,0 +1,82 @@
+\begin{thebibliography}{}
+
+\bibitem [\protect \citeauthoryear {%
+Felsenstein%
+}{%
+Felsenstein%
+}{%
+{\protect \APACyear {1989}}%
+}]{%
+web:phylip}
+\APACinsertmetastar {%
+web:phylip}%
+\begin{APACrefauthors}%
+Felsenstein, J.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{1989}{}{}.
+\newblock
+\APACrefbtitle {{PHYLIP} ({P}hylogeny {I}nference {P}ackage) version 3.6.}
+  {{PHYLIP} ({P}hylogeny {I}nference {P}ackage) version 3.6.}
+\newblock
+\APACaddressPublisher{}{Distributed by the author. {D}epartment of {G}enome
+  {S}ciences, {U}niversity of {W}ashington, {S}eattle.}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Gilbert%
+}{%
+Gilbert%
+}{%
+{\protect \APACyear {1999}}%
+}]{%
+web:phylodendron}
+\APACinsertmetastar {%
+web:phylodendron}%
+\begin{APACrefauthors}%
+Gilbert, D.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{1999}{}{}.
+\newblock
+\APACrefbtitle {Phylodendron.} {Phylodendron.}
+\newblock
+\APACaddressPublisher{}{Department of {B}iology, {U}niversity of {I}ndiana}.
+\newblock
+\begin{APACrefURL} \url{http://iubio.bio.indiana.edu/treeapp} \end{APACrefURL}
+\PrintBackRefs{\CurrentBib}
+
+\bibitem [\protect \citeauthoryear {%
+Kirby%
+\ \BBA {} Ellison%
+}{%
+Kirby%
+\ \BBA {} Ellison%
+}{%
+{\protect \APACyear {2006}}%
+}]{%
+ellison2006measuring}
+\APACinsertmetastar {%
+ellison2006measuring}%
+\begin{APACrefauthors}%
+Kirby, S.%
+\BCBT {}\ \BBA {} Ellison, T\BPBI M.%
+\end{APACrefauthors}%
+\unskip\
+\newblock
+\APACrefYearMonthDay{2006}{}{}.
+\newblock
+{\BBOQ}\APACrefatitle {Measuring language divergence by intra-lexical
+  comparison} {Measuring language divergence by intra-lexical
+  comparison}.{\BBCQ}
+\newblock
+\BIn{} \APACrefbtitle {Proceedings of the 21st International Conference on
+  Computational Linguistics and the 44th annual meeting of the Association for
+  Computational Linguistics} {Proceedings of the 21st international conference
+  on computational linguistics and the 44th annual meeting of the association
+  for computational linguistics}\ (\BPGS\ 273--280).
+\PrintBackRefs{\CurrentBib}
+
+\end{thebibliography}

@@ -1,1 +1,6 @@
-prompt/
+prompt/*
+
+data/*
+phylip-3.695/*
+*.iml
+*/.idea/*
