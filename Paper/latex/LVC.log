@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2016.9.20)  16 FEB 2017 16:56
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2016.9.20)  16 FEB 2017 18:34
 entering extended mode
 **./LVC.tex
 (LVC.tex
@@ -294,7 +294,18 @@ Package pdftex.def Info: french3.png used on input line 65.
 
 
  <./french3.png>]
-(LVC.bbl
+<tree1(3).png, id=12, 585.68813pt x 598.48593pt>
+File: tree1(3).png Graphic file (type png)
+ <use tree1(3).png>
+Package pdftex.def Info: tree1(3).png used on input line 97.
+(pdftex.def)             Requested size: 505.89pt x 516.9709pt.
+
+<tree2(2).png, id=13, 584.1825pt x 596.98032pt>
+File: tree2(2).png Graphic file (type png)
+ <use tree2(2).png>
+Package pdftex.def Info: tree2(2).png used on input line 104.
+(pdftex.def)             Requested size: 505.89pt x 516.99118pt.
+ (LVC.bbl
 Underfull \hbox (badness 3849) in paragraph at lines 38--50
 []\OT1/ptm/m/n/10 Gilbert, D.  (1999).  \OT1/ptm/m/it/10 Phy-lo-den-dron.  \OT1
 /ptm/m/n/10 De-part-ment
@@ -305,26 +316,24 @@ Underfull \hbox (badness 2253) in paragraph at lines 38--50
 \OT1/ptm/m/n/10 of Bi-ol-ogy, Uni-ver-sity of In-di-ana.  Re-trieved from
  []
 
-) [2
-
-] (LVC.aux) ) 
+) [2] [3 <./tree1(3).png>] [4 <./tree2(2).png>] (LVC.aux) ) 
 Here is how much of TeX's memory you used:
- 4088 strings out of 493334
- 54736 string characters out of 3136672
- 124189 words of memory out of 3000000
- 7557 multiletter control sequences out of 15000+200000
+ 4100 strings out of 493334
+ 54919 string characters out of 3136672
+ 125205 words of memory out of 3000000
+ 7567 multiletter control sequences out of 15000+200000
  25921 words of font info for 53 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 40i,9n,25p,811b,226s stack positions out of 5000i,500n,10000p,200000b,50000s
-{E:/Program Files/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<E:/Progr
-am Files/MiKTeX 2.9/fonts/type1/urw/courier/ucrr8a.pfb><E:/Program Files/MiKTeX
- 2.9/fonts/type1/urw/times/utmb8a.pfb><E:/Program Files/MiKTeX 2.9/fonts/type1/
-urw/times/utmr8a.pfb><E:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmri8a
-.pfb><E:/Users/Chris/AppData/Roaming/MiKTeX/2.9/fonts/type1/public/tipa/xipa10.
-pfb>
-Output written on LVC.pdf (2 pages, 381507 bytes).
+ 40i,9n,25p,811b,230s stack positions out of 5000i,500n,10000p,200000b,50000s
+{E:/Program Files/Mi
+KTeX 2.9/fonts/enc/dvips/base/8r.enc}<E:/Program Files/MiKTeX 2.9/fonts/type1/u
+rw/courier/ucrr8a.pfb><E:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmb8a
+.pfb><E:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><E:/Program 
+Files/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb><E:/Users/Chris/AppData/Roam
+ing/MiKTeX/2.9/fonts/type1/public/tipa/xipa10.pfb>
+Output written on LVC.pdf (4 pages, 474523 bytes).
 PDF statistics:
- 33 PDF objects out of 1000 (max. 8388607)
+ 43 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 16 words of extra memory for PDF output out of 10000 (max. 10000000)
 

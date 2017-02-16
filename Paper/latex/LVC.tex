@@ -50,7 +50,7 @@ This study seeks to identify which of these hypotheses is more likely. \\
 
 \section{Implementation}
 
-Our methodology follows much of the same procedures as Kirby and Ellison (2006).  We developed our own tools for generating the lexical metrics of all languages and for comparing them as well, while using an external tool to render the phylogenic trees from the resulting data.
+Our methodology follows much of the same procedures as \citeA{ellison2006measuring}.  We developed our own tools for generating the lexical metrics of all languages and for comparing them as well, while using an external tool to render the phylogenic trees from the resulting data.
 
 As our input, we obtained data from the Indo-European Lexical Cognacy Database.  This data set spans 208 word meanings across 52 languages (not all languages had data for all word meanings), and includes phonemic transcriptions for all words.  We used these transcriptions instead of the word orthography for the inter-lexical comparisons, expecting to better detect similarity between words.
 
@@ -79,11 +79,47 @@ Once having constructed a matrix that represents the distance between all langua
 
 In order to accomplish this, we began by using the \textit{NEIGHBOR} program from the \textit{PHYLIP} package \cite{web:phylip}, as was done in the paper.  This program takes a matrix input, and constructs a tree that represents the relatedness of all of the languages based on their distance measurement.  This tree is output in a text form (in the standardized 'Newick' format) that describes the nodes on the tree and the distance to their child nodes.  Once having generated this, we used the Phylodendron tool from the University of Indiana to visualize this information as a proper tree \cite{web:phylodendron}.  
 
-This process is repeated separately for each of the distance measurement matrices (the KL distance matrix and the Rao distance matrix).
+This process was repeated separately for both the KL distance matrix and the Rao distance matrix.
 
 \section{Results}
+	
+The results from using Kullback-Liebler distance are found in Figure~\ref{fig:kltree}, and the results from using Rao distance are found in Figure~\ref{fig:raotree}.
 
-\section{Discussion and Conclusion}
+In our results, it can be seen that the algorithm does a good job of grouping similar languages together in the tree.  Well-accepted subfamilies of languages can be seen together.  The Rao distance tree seems to do a better job of this grouping, seeing more definable groups with greater consistency.
+
+Some outliers are evident in this tree.  Danish, Norwegian, and Swedish find themselves far separated from their closely related Scandinavian languages (Faroese, Icelandic, etc.), and other Germanic languages (German, English, Dutch) are not grouped well with them at all.  French and Catalan are also similarly separated from their other Romance counterparts (Latin, Spanish, Italian).
+
+Outside of these outliers, the groupings seems quite sensible.  Indo-Iranian languages (Urdo, Ossetic, etc.), Slavic languages (Russian, Czech, Polish, etc.), and most of the Romance languages (Spanish, Italian, etc.) are seen grouped together.  However, the combining of these smaller groupings into larger groupings seems to not make as much sense.
+
+	
+\begin{figure*}[ht] 
+	\centering 
+	\includegraphics[width=\linewidth]{tree1(3)}
+	\caption{Tree visualization of KL-distance measurements}
+	\label{fig:kltree}
+\end{figure*}
+
+\begin{figure*}[ht]
+	\centering
+	\includegraphics[width=\linewidth]{tree2(2)}
+	\caption{Tree visualization of Rao-distance measurements}
+	\label{fig:raotree}
+\end{figure*}
+
+
+\section{Discussion}
+
+Overall, our results seem to reflect positively on the validity of the methodology.  It appears to group similar languages together by an objective measure of the language into generally well-accepted families.  Our results, however, seem weaker than those of Kirby and Ellison.
+
+There are several routes that could be explored for improving the results.  We could have experimented more with how to handle meanings with multiple words, perhaps by taking the minimum confusion probability value or average of the values.  This likely would only have a minor influence on the results, but perhaps noticeable.
+
+The data may also have been lacking, given that so few of the word meanings were found in the data set for all languages.  A larger and more consistent spread of word meanings in the languages may have resulted in more representative lexical metrics and better comparisons between them for measuring distance.
+
+Another avenue for improvement may lie in that our means of calculating edit distances between phonemic transcriptions was not as effective as using orthography, as such transcriptions are not consistent and can be difficult to get an accurate distance measurement out of.  Dealing with how these transcriptions were encoded and comparing them is also challenging, and we may have had better results using third-party libraries that handled this better.  It may even be the case that orthography does a better job of comparing the relatedness of words than phonemic transcriptions, as the orthography could better capture the ancestry of the word.
+
+\section{Conclusion}
+
+This paper presented a reimplementation of an automatic language phylogeny constructing algorithm described by \citeA{ellison2006measuring}, which uses inter-language comparisons of words to build a lexical network that is compared against other languages, measuring their similarity.  This was conducted on a new data set, using phonemic transcriptions instead of orthography for comparing individual words.  We obtained encouraging results that seemed to group languages well, but the results were likely less strong than those from Kirby and Ellison.  Some possible explanations for this were identified, and opened paths for further exploration.
 
 
 \bibliographystyle{apacite}
