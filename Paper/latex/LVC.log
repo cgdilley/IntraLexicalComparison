@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2016.9.20)  18 FEB 2017 12:58
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2016.9.20)  18 FEB 2017 14:28
 entering extended mode
 **./LVC.tex
 (LVC.tex
@@ -289,34 +289,32 @@ File: french3.png Graphic file (type png)
  <use french3.png>
 Package pdftex.def Info: french3.png used on input line 67.
 (pdftex.def)             Requested size: 195.12975pt x 190.13435pt.
+Missing character: There is no â in font ptmr7t!
+Missing character: There is no € in font ptmr7t!
+Missing character: There is no ™ in font ptmr7t!
+Missing character: There is no â in font ptmr7t!
+Missing character: There is no € in font ptmr7t!
+Missing character: There is no ™ in font ptmr7t!
  [1{E:/Users/Chris/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}
 
 
 
- <./french3.png>]
-Missing character: There is no â in font ptmr7t!
-Missing character: There is no € in font ptmr7t!
-Missing character: There is no ™ in font ptmr7t!
-Missing character: There is no â in font ptmr7t!
-Missing character: There is no € in font ptmr7t!
-Missing character: There is no ™ in font ptmr7t!
+]
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
-Underfull \hbox (badness 1168) in paragraph at lines 90--91
-[]\OT1/ptm/b/n/10 - I'VE ADDED THE ORI-GIN PA-PERS FOR KL
- []
 
-<tree1(3).png, id=11, 585.68813pt x 598.48593pt>
+<tree1(3).png, id=10, 585.68813pt x 598.48593pt>
 File: tree1(3).png Graphic file (type png)
  <use tree1(3).png>
-Package pdftex.def Info: tree1(3).png used on input line 113.
+Package pdftex.def Info: tree1(3).png used on input line 111.
 (pdftex.def)             Requested size: 505.89pt x 516.9709pt.
 
-<tree2(2).png, id=12, 584.1825pt x 596.98032pt>
+<tree2(2).png, id=11, 584.1825pt x 596.98032pt>
 File: tree2(2).png Graphic file (type png)
  <use tree2(2).png>
-Package pdftex.def Info: tree2(2).png used on input line 120.
+Package pdftex.def Info: tree2(2).png used on input line 118.
 (pdftex.def)             Requested size: 505.89pt x 516.99118pt.
- [2] (LVC.bbl
+ [2 <./french3.png>] (LVC.bbl
 Underfull \hbox (badness 3849) in paragraph at lines 38--50
 []\OT1/ptm/m/n/10 Gilbert, D.  (1999).  \OT1/ptm/m/it/10 Phy-lo-den-dron.  \OT1
 /ptm/m/n/10 De-part-ment
@@ -333,7 +331,7 @@ Underfull \hbox (badness 2253) in paragraph at lines 38--50
 Here is how much of TeX's memory you used:
  4100 strings out of 493334
  54919 string characters out of 3136672
- 126205 words of memory out of 3000000
+ 126239 words of memory out of 3000000
  7567 multiletter control sequences out of 15000+200000
  25921 words of font info for 53 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -344,7 +342,7 @@ ourier/ucrr8a.pfb><E:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb
 ><E:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><E:/Program File
 s/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb><E:/Users/Chris/AppData/Roaming/
 MiKTeX/2.9/fonts/type1/public/tipa/xipa10.pfb>
-Output written on LVC.pdf (5 pages, 478763 bytes).
+Output written on LVC.pdf (5 pages, 477856 bytes).
 PDF statistics:
  46 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

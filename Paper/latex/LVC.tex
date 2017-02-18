@@ -10,14 +10,14 @@
 \usepackage{tipa}
 
 
-\title{Influences of Uncertainty Optimization on the Development of Language}
+\title{Reimplementation of an Intra-Lexical Technique for Determining Language Similarity}
  
 \author{{\large \bf Christopher Dilley} \\
 	 christopher.dilley@student.uni-tuebingen.de \\\And
 	{\large \bf Erik Schill} \\
 	email@email.com \And
 	{\large \bf Inna Pirina} \\
-	email@email.com }
+	inna.pirina@student.uni-tuebingen.de }
 
 
 \begin{document}
@@ -87,8 +87,6 @@ Calculating the KL distance and Rao distance for a pair of languages involved co
 
 Having compared the matrices of two languages using both KL and Rao distances, we obtained a numerical distance value for each of these methods. We then repeated the process for each pair of the languages in the data set and got the distance measures for each pair. These values were then assembled into another matrix, where the rows and columns represent each language, and the values represent the distance between the row's and the column's languages. In the end, we had two of such matrices: one containing the KL distances for all language pairs, and another containing the Rao distances.
 
-\textbf{- I'VE ADDED THE ORIGIN PAPERS FOR KL DISTANCE AND RAO DISTANCE TO THE BIBTEX FILE, BUT WE PROBABLY DON'T NEED TO CITE THEM RIGHT?  SINCE WE PULLED THEM FROM THE MAIN PAPER?}
-
 \subsection{Constructing Phylogenic Trees}
 
 Once having constructed a matrix that represents the distance between all language pairs in the collection, these results need to be converted into an analyzable form.  Specifically, we want to visualize how close certain language pairs are related, and how they cluster together into larger groups.  From this, we hope to see some of the same taxonomic relations that are generally accepted as language families and subfamilies.
@@ -135,7 +133,7 @@ Another avenue for improvement may lie in that our means of calculating edit dis
 
 \section{Conclusion}
 
-This paper presented a reimplementation of an automatic language phylogeny constructing algorithm described by \citeA{ellison2006measuring}, which uses inter-language comparisons of words to build a lexical network that is compared against other languages, measuring their similarity.  This was conducted on a new data set, using phonemic transcriptions instead of orthography for comparing individual words.  We obtained encouraging results that seemed to group languages well, but the results were likely less strong than those from Kirby and Ellison.  Some possible explanations for this were identified, and opened paths for further exploration.
+This paper presented a reimplementation of an automatic language phylogeny construction algorithm described by \citeA{ellison2006measuring}, which uses inter-language comparisons of words to build a lexical network that is compared against other languages, measuring their similarity.  This was conducted on a new data set, using phonemic transcriptions instead of orthography for comparing individual words.  We obtained encouraging results that seemed to group languages well, but the results were likely less strong than those from Kirby and Ellison.  Some possible explanations for this were identified, and opened paths for further exploration.
 
 
 \bibliographystyle{apacite}
