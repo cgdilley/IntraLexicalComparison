@@ -5,3 +5,6 @@ phylip-3.695/*
 */.idea/*
 Paper/acl2016*
 Thumbs.db
+Code/Plotting/DataPlotter/res/*
+Code/Plotting/out/*
+Code/Plotting/.idea/*
