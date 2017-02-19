@@ -8,16 +8,17 @@
 \usepackage{graphicx}
 \usepackage{csquotes}
 \usepackage{tipa}
+\usepackage{textcomp} % For mid-tildes
 
 
 \title{Reimplementation of an Intra-Lexical Technique for Determining Language Similarity}
  
 \author{{\large \bf Christopher Dilley} \\
-	 christopher.dilley@student.uni-tuebingen.de \\\And
+	 christopher.dilley@stu\texttildelow.de \\\And
 	{\large \bf Erik Schill} \\
-	email@email.com \And
+	erik.schill@stu\texttildelow.de \And
 	{\large \bf Inna Pirina} \\
-	inna.pirina@student.uni-tuebingen.de }
+	inna.pirina@stu\texttildelow.de }
 
 
 \begin{document}
@@ -42,25 +43,29 @@ Kirby and Ellison describe a process whereby a language is quantified as a matri
 
 In employing a new set of data, we hoped to obtain equal or better results.  This new data set contains more data than that used by the authors in the paper, and uses each word's phonemic transcription rather than its orthography to calculate confusion probabilities.  We hypothesized that the language's phonemics would expose more meaningful relationships between words than orthography, as orthography can vary widely.  For example, the English words 'though' and 'toe' have significantly different orthography, while being pronounced very similarly (\textipa{[Do:]} and \textipa{[to:]}).
 
-However, it is possible that this may give worse results as well.  Orthography may better represent the ancestry and relatedness of individual words, even when their phonetics converge.  The fact that 'though' and 'toe' are pronounced similarly may simply be due to random sound shifts causing phonetic convergence by chance, and this phonetic similarity may lead measures of word interrelatedness astray, negatively affecting intra-language comparisons. 
+However, it is possible that this may give worse results as well.  Orthography may better represent the ancestry and relatedness of individual words, even when their phonetics converge.  The fact that \textit{though} and \textit{toe} are pronounced similarly may simply be due to random sound shifts causing phonetic convergence by chance, and this phonetic similarity may lead measures of word interrelatedness astray, negatively affecting intra-language comparisons. 
 
-This study seeks to identify which of these hypotheses is more likely. \\
-
-\textbf{- PHONETICS vs. PHONEMICS vs. PHONOLOGY... WHICH IS CORRECT USAGE HERE?}
+This study seeks to identify which of these hypotheses is more likely.
 
 \section{Implementation}
 
 Our methodology follows much of the same procedures as \citeA{ellison2006measuring}.  We developed our own tools for generating the lexical metrics of all languages and for comparing them as well, while using an external tool to render the phylogenic trees from the resulting data.
 
-As our input, we obtained data from the Indo-European Lexical Cognacy Database.  This data set spans 208 word meanings across 52 languages (not all languages had data for all word meanings), and includes phonemic transcriptions for all words.  We used these transcriptions instead of the word orthography for the inter-lexical comparisons, expecting to better detect similarity between words.\\
-
-\textbf{- PROBABLY WANT TO CITE THIS DATABASE, BUT I COULDN'T FIND A GOOD WAY TO DO SO... AND NO OTHER PAPERS THAT USE IT SEEM TO CITE IT}\\
+As our input, we obtained data from the Indo-European Lexical Cognacy Database.  This data set spans 208 word meanings across 52 languages (not all languages had data for all word meanings), and includes phonemic transcriptions for all words.  We used these transcriptions instead of the word orthography for the inter-lexical comparisons, expecting to better detect similarity between words.
 
 \subsection{Calculating Lexical Metrics}
 
-(Talk about this process of comparing all words inside each language to generate the matrices)
+In order to compare all languages to one another, an objective, numerical representation of the language needed to be created.  This representation is referred to as the language's \textbf{lexical metric}.
 
-Hey, look at the lexical metric in Figure~\ref{fig:french}.
+The measurement used by \citeA{ellison2006measuring} to create the lexical metric was the \textbf{confusion probability} for the language's word pairs, which represents the likelihood that a particular word could be produced or understood instead of an intended word.  More similar words are more likely to be confused, and thus have a higher confusion probability.  Confusion probabilities can be obtained experimentally by testing these word pairs and recording whether they were confused or not, but collecting enough such data for large variety languages would be challenging.  Instead, an estimation must be made based on the surface-level similarity of the words.
+
+The simplest way to measure the similarity of two words would be to use the \textbf{edit distance} between the two words, which is a measure of the minimum number of insertions, deletions, and substitutions of characters that are required to transform one word into another.  In order to adjust for high edit distances that result from large disparities in the size of words, this value is also normalized by the words' combined length.
+
+Kirby and Ellison used the orthography of words to obtain their edit distance measurements.  This has the problem that some words that are similar in pronunciation are quite different in their spelling.  To use the example from earlier, the words \textit{though} and \textit{toe} have an orthographic edit distance of 4, despite only having a change in one phoneme.  We instead opted to use the phonetic transcriptions of the words, with the hypothesis that this would better capture the similarity of words and produce a more accurate lexical metric for the language.  The words \textit{though} and \textit{toe} would be transcribed as \textipa{[Do:]} and \textipa{[to:]}, respectively, and these transcriptions have an edit distance of just 1.
+
+Once having found the edit distance for all words, these values are converted into probabilities, and assembled into a matrix.  The rows and columns of the matrix represent each of the words in the language for which there is data, and the values in each element represent the probability that the row's word may be confused for the column's word.  This matrix is then normalized so that all of the values add up to 1, serving as the final lexical metric for the language.
+
+Figure~\ref{fig:french} serves as a visualization of the lexical metric for French.  Each row and column of pixels represents rows and columns in the matrix, and the brightness of each pixel corresponds to the magnitude of the probability value in that position.
 
 \begin{figure}[ht]
 \centering
